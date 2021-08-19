@@ -5,9 +5,9 @@ WORKDIR /home/node/app
 
 # Installing node dependencies
 COPY package.json .
-COPY yarn.lock .
-RUN yarn
+COPY package-lock.lock .
+RUN npm install
 
 COPY . .
 
-CMD yarn start
+CMD npm run start
