@@ -5,7 +5,7 @@ WORKDIR /home/node/app
 
 # Installing node dependencies
 COPY package.json .
-COPY package-lock.lock .
+COPY package-lock.json .
 RUN npm install
 
 COPY . .
